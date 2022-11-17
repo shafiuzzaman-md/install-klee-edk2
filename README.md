@@ -1,4 +1,4 @@
-# Ubuntu 20.04 LTS
+# Using EDK II with Native GCC in Ubuntu 20.04 LTS
 ## Install required software
 Several Ubuntu packages will be needed to set up the build environment for EDK II. The following command will install all required packages:
 
