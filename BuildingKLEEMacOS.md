@@ -1,3 +1,4 @@
+# Building KLEE with LLVM 11 in macOS
 KLEE is currently tested on Linux x86-64 (particularly Ubuntu), FreeBSD and macOS.
 There is no support for uClibc and the POSIX environment under macOS. KLEE does not work under x86-32.
 
@@ -29,7 +30,7 @@ brew install z3
 ```
 ## (Optional) Get Google test sources:
 For unit tests we use the Google test libraries.
-# Building KLEE with LLVM 11 in macOS
+
 If you want to run the unit tests you need to perform this step and also pass -DENABLE_UNIT_TESTS=ON to CMake when configuring KLEE in step 8.
 
 We currently recommend version 1.11.0, so grab the sources for it.
