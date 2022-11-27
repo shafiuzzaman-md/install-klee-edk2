@@ -32,3 +32,20 @@ KLEE: done: generated tests =
  4. assembly.ll: This file contains a human readable version of the LLVM bitcode executed by KLEE
  5. run.stats: This is a SQLite file containing various statistics emitted by KLEE. While this file can be inspected manually, you should use the klee-stats tool for that.
  6. run.istats: This is a binary file containing global statistics emitted by KLEE for each line of code in the program.
+
+## Link some executables
+This step is completely optional, but if you have to execute the generated programs again and again, it is helpful to have smaller shortcuts for them. For this purpose all modern shells offers some way of creating alias-commands.
+```
+nano ~/.zshrc
+```
+Put these lines at the end of your ~/.zshrc (if using zsh). 
+```
+alias       klee="~/klee/build/bin/klee"
+```
+Now you can run klee by running 
+```
+klee XXXX.bc
+```
+
+
+
