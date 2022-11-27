@@ -29,6 +29,7 @@ brew install z3
 ```
 ## (Optional) Get Google test sources:
 For unit tests we use the Google test libraries.
+# Building KLEE with LLVM 11 in macOS
 If you want to run the unit tests you need to perform this step and also pass -DENABLE_UNIT_TESTS=ON to CMake when configuring KLEE in step 8.
 
 We currently recommend version 1.11.0, so grab the sources for it.
@@ -62,3 +63,4 @@ cmake -DLLVM_CONFIG_BINARY=../../../../../../opt/homebrew/Cellar/llvm@11/11.1.0_
 make
 ```
  
+Source: http://klee.github.io/build-llvm11/
