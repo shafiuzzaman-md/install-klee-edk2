@@ -1,0 +1,11 @@
+Example1_Driver_Lockbox Specifications:
+1. Lockbox SHALL be writeable when lockpin is 0.
+2. Lockbox SHALL NOT be writeable when lockpin is non-zero.
+3. Lockbox SHALL be readable when lockpin is 0 or non-zero.
+4. Lockpin SHALL be initially 0.
+5. Lockpin SHALL be set to non-zero following initization of the Lockbox.
+6. Once Lockpin is non-zero it MUST NOT be set to 0 during the lifetime of the driver.
+
+Other System Specifications:
+1. CRC32 function SHALL take inputs of a memory address (void*) and a length (UINT64).
+2. CRC32 function SHALL return a 32 bit (4 byte) cyclic redundacy checksum for the values in the memory region indicated.
