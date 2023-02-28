@@ -18,15 +18,15 @@ Revision History
 #ifndef _Example1_Driver_Lockbox_H_
 #define _Example1_Driver_Lockbox_H_
 
-#include <Uefi.h>
-#include <Library/DebugLib.h>
-#include <Library/BaseLib.h>
-#include <Library/BaseMemoryLib.h>
-#include <Library/UefiDriverEntryPoint.h>
-#include <Library/UefiBootServicesTableLib.h>
-#include <Library/MemoryAllocationLib.h>
-#include <Library/PrintLib.h>
-#include <Library/UefiLib.h>
+#include "Uefi.h"
+#include "Library/DebugLib.h"
+#include "Library/BaseLib.h"
+#include "Library/BaseMemoryLib.h"
+#include "Library/UefiDriverEntryPoint.h"
+#include "Library/UefiBootServicesTableLib.h"
+#include "Library/MemoryAllocationLib.h"
+#include "Library/PrintLib.h"
+#include "Library/UefiLib.h"
 
 
 #define LOCKED    1

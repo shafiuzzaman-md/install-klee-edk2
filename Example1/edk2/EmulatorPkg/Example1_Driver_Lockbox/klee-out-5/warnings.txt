@@ -1,0 +1,7 @@
+KLEE: WARNING: undefined reference to function: CopyMem
+KLEE: WARNING: undefined reference to function: DebugAssert
+KLEE: WARNING: undefined reference to function: DebugAssertEnabled
+KLEE: WARNING: undefined reference to function: DebugPrint
+KLEE: WARNING: undefined reference to function: DebugPrintEnabled
+KLEE: WARNING: undefined reference to function: DebugPrintLevelEnabled
+KLEE: WARNING ONCE: calling external: DebugAssertEnabled() at Example1_Driver_Lockbox.c:80 3

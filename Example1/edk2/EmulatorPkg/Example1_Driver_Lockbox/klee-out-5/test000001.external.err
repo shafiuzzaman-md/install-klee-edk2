@@ -1,0 +1,8 @@
+Error: failed external call: DebugAssertEnabled
+File: Example1_Driver_Lockbox.c
+Line: 80
+assembly.ll line: 271
+State: 1
+Stack: 
+	#000000271 in Example1_Driver_LockboxInit(symbolic, symbolic) at Example1_Driver_Lockbox.c:80
+	#100000365 in main(1, 93939907110208) at Example1_Driver_Lockbox.c:199

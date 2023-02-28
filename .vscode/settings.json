@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "uefilib.h": "c",
+        "baselib.h": "c"
+    }
+}

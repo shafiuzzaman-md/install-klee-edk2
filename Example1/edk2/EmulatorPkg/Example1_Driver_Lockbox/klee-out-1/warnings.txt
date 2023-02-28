@@ -1,0 +1,2 @@
+KLEE: WARNING: undefined reference to function: Print
+KLEE: WARNING ONCE: calling external: Print(94301731039008, 94301712478208) at hello.c:17 3

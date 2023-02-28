@@ -1,0 +1,8 @@
+Error: failed external call: Print
+File: hello.c
+Line: 14
+assembly.ll line: 43
+State: 1
+Stack: 
+	#000000043 in UefiMain(symbolic, symbolic) at hello.c:14
+	#100000079 in main(1, 94301730841472) at hello.c:28

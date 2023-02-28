@@ -1,0 +1,3 @@
+KLEE: Using Z3 solver backend
+KLEE: ERROR: Example1_Driver_Lockbox.c:80: failed external call: DebugAssertEnabled
+KLEE: NOTE: now ignoring this error at this location

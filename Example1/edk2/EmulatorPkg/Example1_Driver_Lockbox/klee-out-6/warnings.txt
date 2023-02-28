@@ -1,0 +1,4 @@
+KLEE: WARNING: undefined reference to function: CopyMem
+KLEE: WARNING: undefined reference to function: DebugPrint
+KLEE: WARNING: undefined reference to function: DebugPrintEnabled
+KLEE: WARNING: undefined reference to function: DebugPrintLevelEnabled

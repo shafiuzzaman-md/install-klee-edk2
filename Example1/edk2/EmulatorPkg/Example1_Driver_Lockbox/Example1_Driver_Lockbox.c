@@ -8,7 +8,7 @@ SPDX-License-Identifier: BSD-2-Clause-Patent
 **/
 
 #include "Example1_Driver_Lockbox.h"
-
+#include "klee/klee.h"
 ///
 /// SMM Lockbox
 ///
@@ -53,7 +53,7 @@ Example1_Driver_LockboxInit (
   // return in PhysicalBuffer
   //
   Pages = EFI_SIZE_TO_PAGES (SIZE_16KB);
-  Status = gBS->AllocatePages (
+ /*Status = gBS->AllocatePages (
                   AllocateAnyPages,
                   EfiBootServicesData,
                   Pages,
@@ -61,23 +61,25 @@ Example1_Driver_LockboxInit (
                   );
   if (EFI_ERROR (Status)) {
     return Status;
-  }
-
+  }*/ 
+ PhysicalBuffer = (EFI_PHYSICAL_ADDRESS)lockbox_start; // To avoid allocating memory with gBS->AllocatePages
   //
   // Convert the physical address to a pointer.
   // This method works for all support CPU architectures.
   //
   lockbox_start = (VOID *)(UINTN)PhysicalBuffer;
 
-  Status = gBS->InstallProtocolInterface (
-                  &ImageHandle,
-                  &gExample1_Driver_LockboxProtocolGuid,
-                  EFI_NATIVE_INTERFACE,
-                  &gExample1_Driver_LockboxProtocol
-                  );
-  ASSERT_EFI_ERROR (Status);
+  
+  // Remove the external function call
+  // Status = gBS->InstallProtocolInterface (
+  //             &ImageHandle,
+  //             &gExample1_Driver_LockboxProtocolGuid,
+  //             EFI_NATIVE_INTERFACE,
+  //             &gExample1_Driver_LockboxProtocol
+  //             );
+ // ASSERT_EFI_ERROR (Status);
 
-  return EFI_SUCCESS;
+  return Status;
 }
 
 /**
@@ -98,7 +100,7 @@ Example1_Driver_LockboxUnload (
   //
   // Free the allocated buffer
   //
-  Status = gBS->FreePages (PhysicalBuffer, Pages);
+  //Status = gBS->FreePages (PhysicalBuffer, Pages);
   if (EFI_ERROR (Status)) {
     return Status;
   }
@@ -184,4 +186,17 @@ Example1_Driver_Lockbox_ReadData (
 	CopyMem( (void*)*dest, src, length);
 
 	return EFI_SUCCESS;
+}
+
+int main(int argc, char **argv) {
+EFI_HANDLE        ImageHandle;
+EFI_SYSTEM_TABLE  *SystemTable;
+    
+  // Make the input symbolic
+  klee_make_symbolic(&ImageHandle, sizeof(EFI_HANDLE), "ImageHandle");
+  klee_make_symbolic(&SystemTable, sizeof(EFI_SYSTEM_TABLE *), "SystemTable");
+
+  Example1_Driver_LockboxInit(ImageHandle, SystemTable);
+
+    return 0;
 }
