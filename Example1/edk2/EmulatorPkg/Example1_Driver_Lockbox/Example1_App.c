@@ -6,6 +6,8 @@
 
 #include "Example1_Driver_Lockbox.h"
 #include "klee/klee.h"
+
+EFI_BOOT_SERVICES* gBS; // Declare global variable gBS as an EFI_BOOT_SERVICES pointer
 Example1_Driver_Lockbox_PROTOCOL *ProtocolInterface;
 
 /* We assume 
@@ -89,7 +91,7 @@ Example1_App_Entry (
     Print(L"RPOEE App Started\r\n");
 
     /* 1. GET DRIVER PROTOCOL */
-    gBS->LocateProtocol(&gExample1_Driver_LockboxProtocol, NULL, (VOID *)&ProtocolInterface);
+    gBS->LocateProtocol(ProtocolInterface, NULL, (VOID *)&ProtocolInterface);
 
     /* 2. ATTEMPT TO SET DRIVER LOCKPIN TO 0 - EXPECTED TO FAIL */
     Print(L"Call Driver SetLockPin function to try to set to 0 (expected to fail)\r\n");
