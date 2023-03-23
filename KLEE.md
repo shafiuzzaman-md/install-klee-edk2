@@ -68,3 +68,5 @@ cmake -DENABLE_SOLVER_Z3=ON -DENABLE_POSIX_RUNTIME=ON -DKLEE_UCLIBC_PATH=../klee
 ```
 make
 ```
+
+[Run KLEE](RunKLEE.md)
