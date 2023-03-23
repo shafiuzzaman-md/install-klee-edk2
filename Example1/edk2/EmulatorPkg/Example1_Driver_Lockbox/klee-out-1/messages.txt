@@ -1,3 +1,0 @@
-KLEE: Using Z3 solver backend
-KLEE: ERROR: hello.c:14: failed external call: Print
-KLEE: NOTE: now ignoring this error at this location

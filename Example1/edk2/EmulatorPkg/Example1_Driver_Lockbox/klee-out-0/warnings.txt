@@ -1,1 +1,0 @@
-KLEE: ERROR: Could not link KLEE files Entry function 'main' not found in module.

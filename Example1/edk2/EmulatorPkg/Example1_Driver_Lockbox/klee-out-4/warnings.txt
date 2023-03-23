@@ -1,8 +1,0 @@
-KLEE: WARNING: undefined reference to function: CopyMem
-KLEE: WARNING: undefined reference to function: DebugAssert
-KLEE: WARNING: undefined reference to function: DebugAssertEnabled
-KLEE: WARNING: undefined reference to function: DebugPrint
-KLEE: WARNING: undefined reference to function: DebugPrintEnabled
-KLEE: WARNING: undefined reference to function: DebugPrintLevelEnabled
-KLEE: WARNING: undefined reference to variable: gBS
-KLEE: ERROR: Unable to load symbol(gBS) while initializing globals
