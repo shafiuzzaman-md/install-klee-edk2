@@ -11,7 +11,7 @@ which should create a .bc file in LLVM bitcode format.
 
 ## Running KLEE
 ```
-build/bin/klee XXXX.bc
+klee_build/bin/klee XXXX.bc
 ```
 You should see the following output:
 ```
