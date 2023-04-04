@@ -68,5 +68,8 @@ cmake -DENABLE_SOLVER_Z3=ON -DENABLE_POSIX_RUNTIME=ON -DKLEE_UCLIBC_PATH=../klee
 ```
 make
 ```
+KLEE with llvm-14 Known issues: [llvm/Support/TargetRegistry.h: No such file or directory](https://stackoverflow.com/questions/70588147/llvm-support-targetregistry-h-no-such-file-or-directory)
+
+
 
 [Run KLEE](RunKLEE.md)
