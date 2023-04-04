@@ -71,5 +71,15 @@ make
 KLEE with llvm-14 Known issues: [llvm/Support/TargetRegistry.h: No such file or directory](https://stackoverflow.com/questions/70588147/llvm-support-targetregistry-h-no-such-file-or-directory)
 
 
+10. Link the executables
+This step is completely optional, but if you have to execute the generated programs again and again, it is helpful to have smaller shortcuts for them.
+
+Put these lines at the end of your ~/.bashrc. Replace the paths corresponding to your directory structure. 
+
+```
+alias       klee="~/Research/klee_build/bin/klee"
+alias       ktest-tool="~/Research/klee_build/bin/ktest-tool"
+
+```
 
 [Run KLEE](RunKLEE.md)
