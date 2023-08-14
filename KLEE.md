@@ -58,7 +58,7 @@ KLEE must be built “out of source”.
 
 ```
 mkdir klee_build
-cd build
+cd klee_build
 ```
 You need to update the path depending on where you place it in your dirctoty. Following command assumes klee_build is outside the repository. 
 ```
