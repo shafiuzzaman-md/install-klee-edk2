@@ -1,10 +1,4 @@
-# Installing KLEE with llvm-14 
-
-NOTE: KLEE is currently tested on Linux x86-64 (particularly Ubuntu). KLEE does not work under x86-32. Following steps are tested on Ubuntu 22.04.
-
-KLEE needs to be built with **llvm-14** to run on edk2
-
-Follow the manual installation steps from [here](https://klee.github.io/build-llvm11/). The only exception is you need to use llvm-14 instead of llvm-11. 
+# Installing KLEE
 
 1. Install dependencies:
 
@@ -21,8 +15,8 @@ sudo apt-get install python3-tabulate
 sudo apt-get install clang-14 llvm-14 llvm-14-dev llvm-14-tools
 ```
 
-3. Install constraint solver(s)
-Z3:
+3. Install Z3 constraint solver
+
 ```
 git clone https://github.com/Z3Prover/z3.git
 cd z3
