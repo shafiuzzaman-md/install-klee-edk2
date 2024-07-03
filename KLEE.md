@@ -24,6 +24,7 @@ python3 scripts/mk_make.py
 cd build
 make
 sudo make install
+cd ../..
 ```
 
 4. (Optional) Get Google test sources:
